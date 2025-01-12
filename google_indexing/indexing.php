@@ -58,20 +58,13 @@ if ( file_exists(ENGINE_DIR.'/mrdeath/aaparser/google_indexing/data/indexing.jso
             else $indexing_settings['deleted']++;
             $indexing_settings['all']++;
             
-            
-            if ( $status_code == 200 ) {
-                $result_log['urlNotificationMetadata']['latestUpdate']['status'] = 200;
-                if ( $indexing_action != 'get' ) array_unshift($indexing_settings['logs'], $result_log['urlNotificationMetadata']['latestUpdate']);
-            }
-            elseif ($indexing_action != 'get') {
-                $result_indexing = [];
-                $result_indexing['notifyTime'] = date('d.m.Y h:i', time());
-                $result_indexing['type'] = $indexing_type;
-                $result_indexing['url'] = $indexing_url;
-                $result_indexing['status'] = $status_code;
-                array_unshift($indexing_settings['logs'], $result_indexing);
-            }
-            
+			$result_indexing = [];
+			$result_indexing['notifyTime'] = date('d.m.Y h:i', time());
+			$result_indexing['type'] = $indexing_type;
+			$result_indexing['url'] = $indexing_url;
+			$result_indexing['status'] = $status_code;
+			array_unshift($indexing_settings['logs'], $result_indexing);
+			
             file_put_contents(ENGINE_DIR.'/mrdeath/aaparser/google_indexing/data/indexing.json', json_encode($indexing_settings, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ));
 
         }

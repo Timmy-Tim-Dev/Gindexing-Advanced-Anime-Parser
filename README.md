@@ -1,5 +1,5 @@
 <h1 align="center">Google Indexing для Advanced Anime Parser</h1>
-<p><b>Google Indexing для </b> - Дополнение к модулю Advanced Anime Parser для автоматической и ручной отправки ссылок в ускоренном порядке для индексирования сервисами Google.</p>
+<p><b>Google Indexing</b> - Дополнение к модулю Advanced Anime Parser для автоматической и ручной отправки ссылок в ускоренном порядке для индексирования сервисами Google.</p>
 <h2>Установка</h2>
 <ol>
 	<li>Распаковать архив в папку "aaparser".</li>
